@@ -1,0 +1,23 @@
+#app-name {
+    font-style: italic;
+    float: right;
+    font-size: 20px;
+}
+
+#seperator {
+    margin-top: 4px;
+    margin-bottom: 4px; 
+}
+
+.folders-row {
+    display: inline-block;
+}
+
+.folder-image {
+    margin: 18px;
+}
+
+.folder-fagcaption {
+    margin-top: -10px; 
+    text-align: center;
+}

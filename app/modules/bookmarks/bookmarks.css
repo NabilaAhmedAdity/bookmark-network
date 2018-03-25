@@ -1,0 +1,43 @@
+#app-name {
+    font-style: italic;
+    float: right;
+    font-size: 20px;
+}
+
+#seperator {
+    margin-top: 10px;
+    margin-bottom: 4px; 
+}
+
+#red-trash {
+    color: red;
+}
+
+#warning {
+    text-align: center;
+}
+
+.bookmark-row {
+    margin: 15px 0px;
+}
+
+.bookmark-title {
+    font-size: 13px;
+}
+
+.bookmark-link {
+    text-decoration: none;
+    color: black;
+}
+
+.glyphicon {
+    font-size: 20px;
+    color: #337ab7;
+    margin-right: 5px;
+}
+
+.small-cross {
+    font-size: 10px;
+    color: red;
+    margin-left: 10px;
+}

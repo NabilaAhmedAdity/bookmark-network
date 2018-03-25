@@ -1,0 +1,10 @@
+<button type="button" class="btn btn-primary" ng-click="folderCtrl.addFolder()">New Folder</button> 
+<span id="app-name">BookmarkNetwork</span>
+<hr id="seperator">
+<div class="folders-row" ng-repeat="folder in folderCtrl.folders track by $index">
+    <img class="folder-image" src="/images/folder.png" alt="folder-image" ng-click="folderCtrl.open($index)">
+    <figcaption class="folder-fagcaption">
+        <small ng-hide="folderCtrl.editIndex == $index" ng-dblclick="folderCtrl.startEditing($index)">{{folder.name}}</small>
+        <input ng-show="folderCtrl.editIndex == $index" ng-model="folder.name" ng-blur="folderCtrl.doneEditing($index)"/>
+    </figcaption>
+</div>

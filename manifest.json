@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+
+    "name": "Bookmark Network",
+    "description": "This extension will save bookmarks in folders and make it shareable",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src "
+}

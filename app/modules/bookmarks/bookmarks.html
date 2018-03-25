@@ -1,0 +1,23 @@
+<span class="glyphicon glyphicon-triangle-left" ng-click="bookmarkCtrl.goBack()"></span>
+<span class="glyphicon glyphicon-star" ng-click="bookmarkCtrl.addBookmark()"></span>
+<span class="glyphicon glyphicon-share" ng-if="bookmarkCtrl.bookmarkList.length" ng-click="bookmarkCtrl.shareFolder()"></span>
+<span class="glyphicon glyphicon-trash" id="red-trash" ng-click="bookmarkCtrl.showDeleteWarning = true"></span>
+<span id="app-name">BookmarkNetwork</span>
+<hr id="seperator">
+<div id="warning" ng-show="bookmarkCtrl.showDeleteWarning">
+    <span>Sure you want to delete this folder?
+        <button type="button" class="btn btn-primary btn-xs" ng-click="bookmarkCtrl.showDeleteWarning = false">No</button>
+        <button type="button" class="btn btn-primary btn-xs btn-danger" ng-click="bookmarkCtrl.deleteFolder()">Yes</button>
+    </span>
+</div>
+<span ng-show="bookmarkCtrl.loading">Loading....</span>
+<span ng-show="bookmarkCtrl.loading==false && bookmarkCtrl.docUrl">
+    <a ng-href={{bookmarkCtrl.docUrl}} target="_blank">{{bookmarkCtrl.docUrl}}</a>
+</span>
+<div class="bookmark-row" ng-repeat="bookmark in bookmarkCtrl.bookmarkList track by $index">
+    <a class="bookmark-link" ng-href={{bookmark.url}} target="_blank">
+        <img height="16px" width="16px" ng-src={{bookmark.icon}} alt="">
+        <small class="bookmark-title">{{bookmark.title}}</small>
+    </a>
+    <span class="glyphicon glyphicon-remove small-cross" ng-click="bookmarkCtrl.deleteBookmark($index)"></span>
+</div>
